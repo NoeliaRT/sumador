@@ -41,21 +41,29 @@ public class ASumar {
 		}
 		return resultado;
 	}
+
+	/**
+	 * Método que suma cada dígito de un número
+	 * @param primero
+	 * @return int
+	 */
+	public int SumaDigitos(String primero) {
+		int suma = 0;
+        for (int i = 0; i < primero.length(); i++) {
+            // Cadena de un dígito.
+            String digito = primero.substring(i, i+1);
+            suma = suma + Integer.parseInt(digito);  //Conversión de caracter a entero
+            if (i==primero.length()-1) {
+            	 System.out.print(digito);
+            }else
+            System.out.print(digito+ "+");
+        }
+            System.out.println("="+suma);
+        return suma;
+	}
 	
 	
 	
 
-/**
- * @param args
- */
-public static void main(String[] args) {
-	
-	 ASumar numero  = new ASumar();
-	
-	  numero.sumativo("5");
-	  numero.negativo("-54");
-	  
-	  
-}
 
 }

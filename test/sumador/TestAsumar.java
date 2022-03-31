@@ -31,4 +31,15 @@ public class TestAsumar {
        assertEquals("negativo, siempre negativo", resultado );
        
 	}
+	
+	/**
+	 * Prueba para comprobar método SumaDigitos
+	 */
+	@Test
+	 public void testSumaDigitos() {
+      ASumar sumo  = new ASumar();
+      int resultado = sumo.SumaDigitos("57894564");
+      assertEquals(48, resultado );
+      
+	}
 }
