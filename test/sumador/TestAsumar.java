@@ -5,16 +5,16 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * @author Cristian
+ * @author Noelia
  *
  */
 public class TestAsumar {
 
 	/**
-	 * Prueba para comprobar método sumativo
+	 * Prueba para comprobar que el número es de una cifra
 	 */	
 	@Test
-	 public void testsumativo() {
+	 public void testUnaCifra() {
         ASumar sumo  = new ASumar();
         String resultado = sumo.sumativo("5");
         assertEquals("5 = 5",resultado );
@@ -22,12 +22,12 @@ public class TestAsumar {
 	}
 	
 	/**
-	 * Prueba para comprobar método negativo
+	 * Prueba para comprobar si es negativo
 	 */
 	@Test
 	 public void testnegativo() {
        ASumar sumo  = new ASumar();
-       String resultado = sumo.negativo("-54");
+       String resultado = sumo.sumativo("-54");
        assertEquals("negativo, siempre negativo", resultado );
        
 	}

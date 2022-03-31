@@ -11,7 +11,8 @@ public class ASumar {
 	}
 
 	 /**
-	 * Metodo sumativo que comprueba si el número es de 1 dígito
+	 * Método que comprueba el número y si es mayor de un digito y positivo 
+	 * suma sus digitos con SumaDigitos()
 	 * @param cadena
 	 * @return String 
 	 */
@@ -19,31 +20,24 @@ public class ASumar {
 	public String sumativo (String cadena) {
 	        String numero = cadena;
 	        String resultado= "";
-	        if (numero.length() == 1) {
+	        char menor='-';
+	        if (numero.length() == 1 && numero.charAt(0)!= menor) {
 	        	resultado = numero + " = " + numero;
-	           System.out.println(resultado);
-	        } 
+	           System.out.println(resultado);	           
+	        }else
+	        	
+	        	if (numero.charAt(0)==menor){
+	        		resultado= "negativo, siempre negativo";
+	      		  System.out.println(resultado);
+	        	
+	            }else SumaDigitos(numero);
+	        
 	    return resultado;
 	}
 
+	
 	/**
-	 * Metodo que comprueba si un número es negativo
-	 * @param cadena
-	 * @return String
-	 */
-	public String negativo(String cadena) {
-		 String numero = cadena;		 
-	     String resultado= "";
-	     char menor='-';			
-		if (numero.charAt(0)==menor) { 		 
-		  resultado= "negativo, siempre negativo";
-		  System.out.println(resultado);
-		}
-		return resultado;
-	}
-
-	/**
-	 * Método que suma cada dígito de un número
+	 * Método que suma cada dígito de un número positivo
 	 * @param primero
 	 * @return int
 	 */
